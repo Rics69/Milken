@@ -39,6 +39,37 @@ titleBlock.forEach(item=>{
         currentSvg.classList.toggle('hiddentransform');
     });
 });
+
+//scrollDown
+const downBtn = document.querySelector('.header__down');
+
+downBtn.addEventListener('click', ()=>{
+    window.scrollBy({
+        left: 0, // на какое количество пикселей прокрутить вправо от текущей позиции
+        top: 830, // на какое количество пикселей прокрутить вниз от текущей позиции
+        behavior: 'smooth' // определяет плавность прокрутки: 'auto' - мгновенно (по умолчанию), 'smooth' - плавно
+      });
+});
+
+//scrollTop
+
+const btnTop = document.querySelector('.scrolltop');
+
+window.addEventListener('scroll', ()=>{
+    if(window.pageYOffset > 530){
+        btnTop.style.display = 'flex';
+    }else{
+        btnTop.style.display = 'none';
+    }
+});
+
+btnTop.addEventListener('click', ()=>{
+    window.scrollTo({
+        left: 0,
+        top: 0,
+        behavior: "smooth"
+    });
+});
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map

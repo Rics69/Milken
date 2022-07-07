@@ -70,6 +70,30 @@ btnTop.addEventListener('click', ()=>{
         behavior: "smooth"
     });
 });
+
+//news
+const newsItems = document.querySelectorAll('[data-news]'),
+      newsBtn = document.querySelector('.news__btn');
+
+newsBtn.addEventListener('click', ()=>{
+    let numberNewsItem = 0;
+    newsItems[numberNewsItem+3].classList.toggle('hidden');
+    newsItems[numberNewsItem+4].classList.toggle('hidden');
+    newsItems[numberNewsItem+5].classList.toggle('hidden');
+    numberNewsItem += 3;
+});
+
+//menu
+const menuElement = document.querySelector('.menu');
+
+window.addEventListener('scroll', ()=>{
+    if(window.pageYOffset > 200){
+        menuElement.style.backgroundColor = '#000';
+        menuElement.style.zIndex = '10';
+    }else{
+        menuElement.style.backgroundColor = 'transparent';
+    }
+});
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map

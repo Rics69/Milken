@@ -57,7 +57,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    transition: all .3s;
     &__logo{
         font-family: 'Inter', sans-serif;
         text-decoration: none;
@@ -364,7 +364,7 @@ body{
     }
     &__content {
         flex: 0 1 50%;
-        margin: 20px 0 0 0;
+        margin: 20px 0 0 20px;
     }
 
     &__title {
@@ -486,6 +486,9 @@ body{
         border-radius: 0.3rem;
         margin-right: 30px;
         transition: all .3s;
+        &:last-child{
+            margin-right: 0;
+        }
         &:nth-child(2){
             .plan__price{
                 color: #00e5ff;
@@ -565,6 +568,7 @@ body{
     &__item-title-block{
         display: flex;
         align-items: center;
+        justify-content: center;
         cursor: pointer;
         transition: all .3s;
         &:hover{
@@ -600,6 +604,7 @@ body{
     }
 
     &__item-text {
+        text-align: center;
         margin-top: 16px;
         color: #78909C;
     }
@@ -645,7 +650,7 @@ body{
     }
 
     &__item {
-        flex: 0 1 370px;
+        flex: 0 1 30%;
         background-color: #263238;
         border: 0px solid rgba(0, 0, 0, 0.125);
         border-radius: 0.3rem;
@@ -805,5 +810,105 @@ body{
     }
     100%{
         transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 993px){
+    .liver__slider-container{
+        width: 400px;
+        height: 250px;
+    }
+    .liver__slider-item{
+        min-width: 400px;
+    }
+}
+
+@media (max-width: 768px){
+    .liver__title{
+        font-size: 2rem;
+    }
+    .liver__text{
+        font-size: .9rem;
+    }
+
+    .liver__btn{
+        padding: 6px 16px;
+    }
+
+    .liver__slider-container{
+        width: 300px;
+        height: 200px;
+    }
+    .liver__slider-item{
+        min-width: 300px;
+    }
+
+    .plan__item{
+        &:first-child{
+            margin: 0 30px 0 15px;
+        }
+        &:last-child{
+            margin: 0 15px 0 0;
+        }
+    }
+    .plan__btn{
+        font-size: .6rem;
+    }
+}
+
+@media (max-width: 576px){
+    .header__title{
+        font-size: 2.5rem;
+    }
+    .header__text{
+        font-size: 1rem;
+    }
+    .header__btn{
+        font-size: .7rem;
+    }
+    .benefit__title{
+        font-size: 2.3rem;
+    }
+    .benefit__text{
+        font-size: 1rem;
+    }
+    .liver__title{
+        font-size: 1.5rem;
+    }
+    .liver__text{
+        font-size: .7rem;
+    }
+    .liver__btn{
+        font-size: .7rem;
+    }
+    .liver__slider-container{
+        width: 200px;
+        height: 130px;
+    }
+    .liver__slider-item{
+        min-width: 200px;
+    }
+    .plan__title{
+        font-size: 2rem;
+    }
+    .plan__items{
+        flex-direction: column;
+        align-items: center;
+    }
+    .plan__item{
+        margin: 0 0 20px 0 !important;
+    }
+
+    .questions__accordeon{
+        flex-direction: column;
+    }
+
+    .news__items{
+        flex-direction: column;
+        margin: 0 25px 0 25px;
+    }
+
+    .footer__text{
+        display: none;
     }
 }

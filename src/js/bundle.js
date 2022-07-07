@@ -94,6 +94,18 @@ window.addEventListener('scroll', ()=>{
         menuElement.style.backgroundColor = 'transparent';
     }
 });
+
+//burger
+const burger = document.querySelector('.menu__burger-item-btn'),
+      burgerMenu = document.querySelector('.menu__burger-open');
+
+burger.addEventListener('click', ()=>{
+    if(burger.classList.contains('opened')){
+        burgerMenu.style.transform = 'translateX(0)';
+    }else{
+        burgerMenu.style.transform = 'translateX(-200px)';
+    }
+});
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map
